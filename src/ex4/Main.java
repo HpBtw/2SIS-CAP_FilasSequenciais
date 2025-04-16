@@ -50,8 +50,17 @@ public class Main {
                         System.out.println("Operação finalizada!");
                     }
                     else {
-                        System.err.println("Ainda há processos na fila!");
-                        opcao = 0;
+                        System.out.println("Ainda há processos na fila! Deseja encerrá-los forçadamente?");
+                        System.out.println("1. Sim\n2. Não");
+                        confirmacao = kb.nextInt();
+                        if (confirmacao == 1) {
+                            while (!fila.isEmpty()) {
+                                fila.dequeue();
+                            }
+                            System.out.println("Operação finalizada!");
+                        } else {
+                            opcao = 0;
+                        }
                     }
                 break;
                 default:
