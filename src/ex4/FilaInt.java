@@ -1,4 +1,4 @@
-package domain;
+package ex4;
 
 public class FilaInt {
     final int N = 3;
@@ -37,5 +37,13 @@ public class FilaInt {
 
     public int first() {
         return dados[inicio];
+    }
+
+    public String print() {
+        String aux = "\nElementos na fila: ";
+        for (int elemento : dados) {
+            aux += elemento + " ";
+        }
+        return aux;
     }
 }
