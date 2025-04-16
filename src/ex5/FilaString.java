@@ -42,7 +42,7 @@ public class FilaString {
     public String print() {
         String aux = "\nPacientes na fila: ";
         for (int i = 0; i < fim; i++) {
-            aux += dados[i] + " ";
+            aux += dados[i] + ", ";
         }
 
         return aux;
